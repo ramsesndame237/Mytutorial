@@ -1,0 +1,6 @@
+description de l'application :
+c'est une application de gestion d'une alimentation
+
+[ ] créer un plugin de routage
+[ ] créer un custom element pour l'affichage des différents element de vue
+[ ]  mettre en place le système de layout
