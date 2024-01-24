@@ -1,2 +1,12 @@
 @import url("../global.css") ;
 @import url("../components/hearder.css");
+@import url("../components/sidebar.css");
+
+main{
+    border: solid blue;
+    height: calc(100vh - 80px);
+    display: flex;
+}
+.overview-content{
+    border: solid;
+}

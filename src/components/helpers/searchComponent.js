@@ -6,7 +6,7 @@ class SearchComponent extends HTMLElement {
     connectedCallback() {
         const shadow = this.attachShadow({mode: "open"})
         const wrapper = document.createElement("div")
-        wrapper.setAttribute("class","search")
+        wrapper.setAttribute("class", "search")
         const icon = document.createElement("span")
         icon.setAttribute("class", "icon-search")
         const inputElement = document.createElement("input")
@@ -14,7 +14,6 @@ class SearchComponent extends HTMLElement {
         const iconProps = this.getAttribute("icon")
 
         if (typeSearch === "icon" && iconProps) {
-            console.log("this is the icon of the search bar", iconProps)
 
             const img = document.createElement("img")
             img.src = iconProps
@@ -24,11 +23,11 @@ class SearchComponent extends HTMLElement {
             wrapperSearch.classList.add("inactive")
             wrapperSearch.appendChild(inputElement)
             wrapper.appendChild(wrapperSearch)
-            icon.addEventListener("click",(e)=>{
-                if(wrapperSearch.classList.contains("inactive")){
+            icon.addEventListener("click", (e) => {
+                if (wrapperSearch.classList.contains("inactive")) {
                     wrapperSearch.classList.remove("inactive")
                     wrapperSearch.classList.add("active")
-                }else {
+                } else {
                     wrapperSearch.classList.remove("active")
                     wrapperSearch.classList.add("inactive")
                 }
@@ -43,6 +42,7 @@ class SearchComponent extends HTMLElement {
             cursor:pointer;
             height:45px;
             width:45px;
+            display:flex;
         }
         
         .inactive{display:block;translate:0px -500px}
@@ -56,10 +56,16 @@ class SearchComponent extends HTMLElement {
             left:-23.5vw;
             bottom:-8vh;
             transition: 0.5s ease-in-out;
+            overflow:hidden;
         }
         .wrapper-search input{
-            height:60px;
+            height:100%;
+            width:100%;
             padding-left:10px;
+            font-size:25px;
+        }
+        .wrapper-search input:focus{
+             outline:none; 
         }
         
         @keyframe fade{

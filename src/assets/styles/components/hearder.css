@@ -12,7 +12,6 @@ header{
 }
 .user_action_container{
     flex-grow: 1;
-    border: solid green;
     height: 100%;
     max-height: 100%;
     display: flex;
@@ -26,6 +25,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 .notification_container img{
     width: 100%;
